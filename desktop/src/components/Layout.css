@@ -1,0 +1,144 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: #1a1a1a;
+  border-right: 1px solid #404040;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #404040;
+  background-color: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.app-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #cccccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.nav-item:hover {
+  background-color: #333333;
+  color: #ffffff;
+  border-left-color: var(--color-primary);
+}
+
+.nav-item.active {
+  background-color: #333333;
+  color: var(--color-primary);
+  border-left-color: var(--color-primary);
+  border-left-width: 6px;
+}
+
+.nav-icon {
+  font-size: 20px;
+  margin-right: 12px;
+  min-width: 24px;
+  text-align: center;
+  color: inherit; /* icons inherit link color */
+}
+
+.nav-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: 20px;
+  background-color: #000000;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
+.main-content.collapsed {
+  margin-left: var(--sidebar-width-collapsed);
+}
+
+.sidebar.collapsed .nav-label {
+  display: none;
+}
+
+.sidebar.collapsed .nav-icon {
+  margin-right: 0;
+}
+
+.sidebar.collapsed .nav-item {
+  justify-content: center;
+}
+
+/* Collapse Button */
+.collapse-btn {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.collapse-btn:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+  
+  .main-content {
+    margin-left: 60px;
+  }
+  
+  .nav-label {
+    display: none;
+  }
+  
+  .app-title {
+    font-size: 12px;
+  }
+  
+  .sidebar-header {
+    padding: 10px;
+  }
+} 

@@ -1,0 +1,235 @@
+.event-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.event-card-small {
+  max-width: 350px;
+}
+
+.event-card-large {
+  max-width: 600px;
+}
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.event-title-section {
+  flex: 1;
+}
+
+.event-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-location {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin: 0 0 4px 0;
+}
+
+.event-date {
+  font-size: 0.85rem;
+  color: #999999;
+  margin: 0;
+}
+
+.event-status {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.status-upcoming {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.status-live {
+  background-color: #e3342f;
+  color: #ffffff;
+  animation: pulse 2s infinite;
+}
+
+.status-completed {
+  background-color: #38c172;
+  color: #ffffff;
+}
+
+.event-countdown {
+  margin: 16px 0 20px 0;
+}
+
+.event-fights {
+  margin-bottom: 16px;
+}
+
+.fight-matchup {
+  padding: 16px;
+  background-color: #1a1a1a;
+  border: 1px solid #404040;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.fight-matchup.main-event {
+  border-color: #007bff;
+  background-color: #1a2332;
+}
+
+.main-event-badge {
+  position: absolute;
+  top: -8px;
+  left: 16px;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fight-title {
+  font-size: 0.85rem;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.fighters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.fighter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.fighter-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.fighter-record {
+  font-size: 0.8rem;
+  color: #38c172;
+  font-weight: 500;
+}
+
+.vs {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e3342f;
+  margin: 0 16px;
+  padding: 8px;
+  background-color: #2d1f1f;
+  border-radius: 50%;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weight-class {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999999;
+  font-style: italic;
+}
+
+.event-results {
+  border-top: 1px solid #404040;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.results-header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #38c172;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.main-result {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.winner {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #38c172;
+  text-transform: capitalize;
+}
+
+.method {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.round-time {
+  font-size: 0.8rem;
+  color: #999999;
+}
+
+/* Live event animation */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .event-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .event-name {
+    font-size: 1.3rem;
+  }
+  
+  .fighters {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .vs {
+    margin: 0;
+    transform: rotate(90deg);
+  }
+  
+  .fighter {
+    width: 100%;
+  }
+} 

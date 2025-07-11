@@ -1,0 +1,115 @@
+.App {
+  text-align: left;
+  background-color: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Global utility classes */
+.text-primary {
+  color: #007bff;
+}
+
+.text-secondary {
+  color: #cccccc;
+}
+
+.text-muted {
+  color: #999999;
+}
+
+.text-success {
+  color: #38c172;
+}
+
+.text-danger {
+  color: #e3342f;
+}
+
+.bg-primary {
+  background-color: #007bff;
+}
+
+.bg-secondary {
+  background-color: #2a2a2a;
+}
+
+.bg-dark {
+  background-color: #1a1a1a;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-success {
+  background-color: #38c172;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #2d995b;
+}
+
+.btn-danger {
+  background-color: #e3342f;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #cc1f1a;
+} 

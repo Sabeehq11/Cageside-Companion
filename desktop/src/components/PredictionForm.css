@@ -1,0 +1,214 @@
+.prediction-form-card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.prediction-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.prediction-header h3 {
+  color: #007bff;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.fight-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.fight-info .fighter-name {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.fight-info .vs {
+  color: #e3342f;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.fight-details {
+  color: #999999;
+  font-size: 0.9rem;
+}
+
+.prediction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #cccccc;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fighter-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.fighter-option {
+  display: block;
+  padding: 16px;
+  background-color: #1a1a1a;
+  border: 2px solid #404040;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fighter-option:hover {
+  border-color: #007bff;
+  background-color: #262626;
+}
+
+.fighter-option.selected {
+  border-color: #007bff;
+  background-color: #1a2332;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+}
+
+.fighter-option input[type="radio"] {
+  display: none;
+}
+
+.fighter-option-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fighter-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fighter-option-content .fighter-name {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.fighter-option-content .fighter-record {
+  font-size: 0.8rem;
+  color: #38c172;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-select {
+  padding: 12px;
+  background-color: #1a1a1a;
+  border: 2px solid #404040;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+}
+
+.form-select option {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.confidence-slider {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, #e3342f 0%, #f39c12 50%, #38c172 100%);
+  border-radius: 3px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.confidence-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.4);
+  border: 2px solid #ffffff;
+}
+
+.confidence-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.4);
+}
+
+.confidence-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #999999;
+  margin-top: 4px;
+}
+
+.form-actions {
+  margin-top: 8px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .fighter-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .fighter-option-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .fight-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+} 
